@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developers.reddit.com/schema/config-file.v1.json",
+  "name": "groceryguessr",
+  "post": {
+    "dir": "dist/client",
+    "entrypoints": {
+      "default": {
+        "entry": "main.js"
+      }
+    }
+  },
+  "server": {
+    "dir": "dist/server",
+    "entry": "index.js"
+  },
+  "media": {},
+  "menu": {
+    "items": [
+      {
+        "label": "Create a new post",
+        "description": "groceryguessr",
+        "location": "subreddit",
+        "forUserType": "moderator",
+        "endpoint": "/internal/menu/post-create"
+      }
+    ]
+  },
+  "triggers": {
+    "onAppInstall": "/internal/on-app-install"
+  },
+  "dev": {
+    "subreddit": "groceryguessr_dev"
+  }
+}
